@@ -23,7 +23,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: var(--color-black);
-  background: url('../assets/png/noise.png'), url('../assets/png/gradient.png');
+  background: url('../assets/images/noise.png'), url('../assets/images/gradient.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -60,7 +60,7 @@ body {
 .page-header__logo {
   height: 100%;
 }
-.page-header__logo-svg {
+.page-header__logo-icon {
   height: 100%;
 }
 .page-header__nav {
@@ -502,13 +502,13 @@ body {
   background: var(--color-disabled);
   border-radius: 50%;
 }
-.reservation__tables{
-
-}
 .tables{
   position: relative;
 }
 .tables__scene {
+  position: absolute;
+  top: 0;
+  left: 310px;
   width: 162px;
   height: 34px;
   display: flex;
@@ -519,6 +519,9 @@ body {
   font-weight: 600;
 }
 .tables__dance-floor {
+  position: absolute;
+  bottom: 246px;
+  left: 321px;
   width: 141px;
   height: 141px;
   display: flex;
@@ -530,6 +533,7 @@ body {
   font-weight: 600;
 }
 .tables__button {
+  position: absolute;
   margin: 0;
   padding: 0;
   outline: none;
@@ -537,7 +541,10 @@ body {
   background: none;
   cursor: pointer;
 }
-.tables__button:disabled > .tables__table {
+.tables__button:disabled{
+  cursor: auto;
+}
+.tables__button:disabled > .tables__button-container > .tables__table {
   border: 1px solid var(--color-disabled);
   background-color: var(--color-disabled);
   color: var(--color-black);
@@ -550,34 +557,34 @@ body {
   font-size: 20px;
   font-weight: 800;
 }
-.tables__table--small {
+.tables__button-container--small > .tables__table {
   width: 62px;
   height: 37px;
   border: 1px solid var(--color-red);
   color: var(--color-red);
 }
-.tables__table--small.tables__table--checked{
+.tables__button-container--small > .tables__table.tables__table--checked{
   border: 1px solid var(--color-dark-red);
   background-color: var(--color-dark-red);
   color: var(--color-white);
 }
-.tables__table--medium {
+.tables__button-container--medium > .tables__table {
   width: 84px;
   height: 29px;
   border: 1px solid var(--color-red);
   color: var(--color-red);
 }
-.tables__table--medium.tables__table--checked{
+.tables__button-container--medium > .tables__table.tables__table--checked{
   border: 1px solid var(--color-dark-red);
   background-color: var(--color-dark-red);
   color: var(--color-white);
 }
-.tables__table--large {
+.tables__button-container--large > .tables__table {
   width: 41px;
   height: 94px;
   border: 1px solid var(--color-black);
 }
-.tables__table--large.tables__table--checked{
+.tables__button-container--large > .tables__table.tables__table--checked{
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -620,4 +627,158 @@ body {
 }
 .tables__table--bar.tables__table--checked::after{
   background-color: var(--color-black);
+}
+
+.tables__button-container{
+  position: relative;
+}
+
+.tables__button--1{
+  left: 507px;
+  bottom: 308px;
+}
+.tables__button--2{
+  right: 0;
+  bottom: 274px;
+}
+.tables__button--3{
+  right: 0;
+  bottom: 93px;
+}
+.tables__button--4{
+  right: 162px;
+  bottom: 161px;
+}
+.tables__button--5{
+  right: 218px;
+  bottom: 0;
+}
+.tables__button--6{
+  left: 246px;
+  bottom: 0;
+}
+.tables__button--7{
+  left: 293px;
+  bottom: 160px;
+}
+.tables__button--8{
+  left: 159px;
+  bottom: 166px;
+}
+.tables__button--9{
+  left: 194px;
+  bottom: 308px;
+}
+.tables__button--10{
+  left: 15px;
+  bottom: 306px;
+}
+.tables__button--11{
+  left: 0px;
+  bottom: 93px;
+}
+
+.tables__chair {
+  position: absolute;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+}
+.tables__button:disabled > .tables__button-container > .tables__chair {
+  border: 1px solid var(--color-disabled);
+  background-color: var(--color-disabled);
+}
+.tables__button-container--small > .tables__chair, .tables__button-container--medium > .tables__chair {
+  border-color: var(--color-red);
+}
+.tables__table--checked.tables__table--small ~ .tables__chair, .tables__table--checked.tables__table--medium ~ .tables__chair {
+  background-color: var(--color-dark-red);
+  border-color: var(--color-dark-red);
+}
+.tables__table--checked.tables__table--large ~ .tables__chair, .tables__table--checked.tables__table--bar ~ .tables__chair {
+  background-color: var(--color-black);
+}
+.tables__button-container--small > .tables__chair--1 {
+  top: -27px;
+  right: 21px;
+}
+.tables__button-container--small > .tables__chair--2 {
+  bottom: -27px;
+  right: 21px;
+}
+.tables__button-container--small > .tables__chair--3 {
+  bottom: 9px;
+  left: -28px;
+}
+.tables__button-container--medium > .tables__chair--1 {
+  bottom: 4px;
+  right: -27px;
+}
+.tables__button-container--medium > .tables__chair--2 {
+  bottom: -27px;
+  right: 9px;
+}
+.tables__button-container--medium > .tables__chair--3 {
+  bottom: -27px;
+  left: 8px;
+}
+.tables__button-container--medium > .tables__chair--4 {
+  top: -27px;
+  right: 9px;
+}
+.tables__button-container--medium > .tables__chair--4--right {
+  top: auto;
+  right: auto;
+  bottom: 3px;
+  left: -27px;
+}
+.tables__button-container--medium > .tables__chair--5 {
+  top: -27px;
+  left: 8px;
+}
+.tables__button-container--large > .tables__chair--1 {
+  bottom: -27px;
+  right: 8px;
+}
+.tables__button-container--large > .tables__chair--2 {
+  bottom: 3px;
+  right: -27px;
+}
+.tables__button-container--large > .tables__chair--3 {
+  bottom: 4px;
+  left: -27px;
+}
+.tables__button-container--large > .tables__chair--4 {
+  bottom: 37px;
+  left: -27px;
+}
+.tables__button-container--large > .tables__chair--5 {
+  bottom: 36px;
+  right: -27px;
+}
+.tables__button-container--large > .tables__chair--6 {
+  top: 0;
+  left: -27px;
+}
+.tables__button-container--large > .tables__chair--7 {
+  top: 1px;
+  right: -27px;
+}
+.tables__button-container--bar > .tables__chair--1 {
+  bottom: 31px;
+  right: 36px;
+}
+.tables__button-container--bar > .tables__chair--2 {
+  bottom: 65px;
+  right: 36px;
+}
+.tables__button-container--bar > .tables__chair--3 {
+  bottom: 31px;
+  left: 34px;
+}
+.tables__button-container--bar > .tables__chair--4 {
+  bottom: 31px;
+  left: 0;
 }

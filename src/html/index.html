@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>LENNI ART</title>
+  </head>
+  <body>
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+      <div class="home">
+        @@include('blocks/head.html')
+
+        <section class="offers home__offers"></section>
+        <section class="about home__about"></section>
+        <section class="upcoming home__upcoming"></section>
+        <section class="listing home__listing"></section>
+        <section class="contacts home__contacts"></section>
+
+        <div class="doit home__doit"></div>
+      </div>
+    </main>
+    @@include('blocks/page-footer.html')
+  </body>
+</html>
