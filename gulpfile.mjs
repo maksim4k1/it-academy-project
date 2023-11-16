@@ -23,7 +23,7 @@ import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 
 const resources ={
-  html: "src/html/**/*html",
+  html: "src/html/**/*.html",
   jsDev: "src/scripts/dev/*.js",
   jsVendor: "src/scripts/vendor/*.js",
   less: "src/styles/**/*.less",

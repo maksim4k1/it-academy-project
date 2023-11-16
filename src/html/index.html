@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../styles/style.css">
-
-    <title>LENNI ART</title>
-  </head>
+  @@include('blocks/head.html')
   <body>
     @@include('blocks/page-header.html')
+    <header class="main-header home__main-header">
+      <h1 class="main-header__title">арт — пространство</h1>
+      <picture class="main-header__picture">
+        <img src="assets/images/lenni.svg" alt="LENNI" class="main-header__image">
+      </picture>
+      <p class="main-header__text">для людей, горящих сердцем и делом<br/>место для настоящего</p>
+    
+      <div class="main-header__buttons">
+        <div class="main-header__buttons-title">Я хочу:</div>
+        <div class="main-header__buttons-container">
+          <button class="main-header__button main-header__button--red button">Провести мероприятие</button>
+          <button class="main-header__button main-header__button--white button">Стать арендатором</button>
+        </div>
+      </div>
+    </header>
 
     <main class="main">
       <div class="home">
-        @@include('blocks/head.html')
-
         <section class="offers home__offers"></section>
         <section class="about home__about"></section>
         <section class="upcoming home__upcoming"></section>
