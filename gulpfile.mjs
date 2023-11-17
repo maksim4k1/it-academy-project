@@ -24,14 +24,14 @@ import svgstore from "gulp-svgstore";
 
 const resources ={
   html: "src/html/**/*.html",
-  jsDev: "src/scripts/dev/*.js",
-  jsVendor: "src/scripts/vendor/*.js",
+  jsDev: "src/scripts/dev/**/*.js",
+  jsVendor: "src/scripts/vendor/**/*.js",
   less: "src/styles/**/*.less",
   static: [
     "src/assets/icons/**/*.",
-    "src/assets/fonts/**/*.(woff, woff2)"
+    "src/assets/fonts/**/*.{woff, woff2}",
   ],
-  images: "src/assets/images/**/*.(jpg,png,jpeg,webp,gif,svg)",
+  images: "src/assets/images/**/*.{jpg,png,jpeg,webp,gif,svg}",
   svgSprite: "src/assets/svg-sprites/**/*.svg",
 }
 
@@ -143,19 +143,6 @@ function reloadServer(done){
   done();
 }
 
-function serve(){
-  server.init({
-    serve: "dist",
-  });
-  gulp.watch(resources.html, gulp.series(includeHTML, reloadServer));
-  gulp.watch(resources.jsDev, gulp.series(js, reloadServer));
-  gulp.watch(resources.jsVendor, gulp.series(jsCopy, reloadServer));
-  gulp.watch(resources.less, gulp.series(style, reloadServer));
-  gulp.watch(resources.static, {delay: 500}, gulp.series(copy, reloadServer));
-  gulp.watch(resources.images, {delay: 500}, gulp.series(images, reloadServer));
-  gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
-}
-
 const build = gulp.series(
   clean,
   copy,
@@ -166,6 +153,19 @@ const build = gulp.series(
   images,
   svgSprite
 );
+
+function serve(){
+  server.init({
+    server: "dist",
+  });
+  gulp.watch(resources.html, gulp.series(includeHTML, reloadServer));
+  gulp.watch(resources.jsDev, gulp.series(js, reloadServer));
+  gulp.watch(resources.jsVendor, gulp.series(jsCopy, reloadServer));
+  gulp.watch(resources.less, gulp.series(style, reloadServer));
+  gulp.watch(resources.static, {delay: 500}, gulp.series(copy, reloadServer));
+  gulp.watch(resources.images, {delay: 500}, gulp.series(images, reloadServer));
+  gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
+}
 
 const start = gulp.series(build, serve);
 
