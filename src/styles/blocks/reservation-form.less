@@ -1,0 +1,126 @@
+.reservation-form{
+  &__legend{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+
+    &--checkboxes {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__checkboxes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  &__checkbox {
+    display: none;
+    
+    &:disabled + .reservation-form__label{
+      opacity: 0.5;
+      cursor: auto;
+    }
+
+    &:checked + .reservation-form__label::before {
+      background-color: var(--color-black);
+    }
+
+    &:checked + .reservation-form__label--red::before {
+      background-color: var(--color-dark-red);
+      border-color: var(--color-dark-red);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+    &::before {
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--color-black);
+    }
+
+    &--red{
+      color: var(--color-red);
+
+      &::before {
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--color-red);
+      }
+    }
+  }
+
+  &__bilets {
+    margin: auto 0 0;
+  }
+
+  &__bilets-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+  }
+
+  &__bilets-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    padding: 0 15px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__summ {
+    margin: 25px 0 53px;
+    display: flex;
+    justify-content: space-between;
+    gap: calc(100px / 3);
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__summ-item {
+    width: 100%;
+    text-align: right;
+
+    &--right {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+
+    &:hover{
+      background-color: var(--color-dark-red);
+      border-color: var(--color-dark-red);
+    }
+  }
+}

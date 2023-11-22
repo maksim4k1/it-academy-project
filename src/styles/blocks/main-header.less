@@ -1,0 +1,80 @@
+.main-header {
+  margin: 100px 0;
+
+  &__title {
+    font-family: 'Lora', serif;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-family: 'Lora', serif;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__picture {
+    max-height: 325px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+
+    &::before, &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: calc(50% - 1920px / 2 + 100px);
+      height: 100%;
+      background: var(--color-black);
+    }
+
+    &::after {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  &__buttons {
+    width: 624px;
+    margin: 0 auto;
+  }
+
+  &__buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buttons-title {
+    margin: 100px 0 46px 18px;
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__button--red {
+    color: var(--color-white);
+    background: var(--color-red);
+    border-color: var(--color-red);
+    &:hover {
+      background-color: var(--color-dark-red);
+      border-color: var(--color-dark-red);
+    }
+  }
+
+  &__button--white {
+    padding: 15px 43px;
+  }
+}
