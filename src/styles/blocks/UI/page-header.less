@@ -13,10 +13,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-page-header-background);
+    background: @gray_80;
     @supports(backdrop-filter: blur(10px)){
       backdrop-filter: blur(10px);
-      background: var(--color-page-header-background);
+      background: @gray_80;
     }
     z-index: -1;
   }
@@ -49,14 +49,14 @@
   }
 
   &__nav-link {
-    color: var(--color-black);
+    color: @black;
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
-      color: var(--color-red);
+      color: @red;
     }
   }
 
