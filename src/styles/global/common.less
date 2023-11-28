@@ -43,7 +43,35 @@ img{
 button{
   box-shadow: none;
   outline: none;
+  border: none;
   color: @black;
   font-family: @font1;
   cursor: pointer;
+}
+
+input,
+textarea,
+select{
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+}
+
+textarea{
+  resize: none;
+}
+
+input,
+textarea{
+  &::placeholder{
+    color: @gray_placeholder;
+  }
+}
+
+input:focus,
+textarea:focus{
+  &::placeholder{
+    color: transparent;
+  }
 }

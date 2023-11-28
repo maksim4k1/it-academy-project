@@ -1,0 +1,49 @@
+.radio {
+  position: relative;
+  height: 23px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    .is-hidden;
+
+    &:checked + .radio__label::after{
+      background-color: @black;
+    }
+  }
+
+  &__label {
+    height: 22px;
+    padding-left: 49px;
+    cursor: pointer;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+      top: 0;
+      left: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 23px;
+      height: 23px;
+      border: 2px solid @black;
+      border-radius: 50%;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-color: transparent;
+      border-radius: 50%;
+    }
+  }
+}

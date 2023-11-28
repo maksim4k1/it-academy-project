@@ -1,0 +1,45 @@
+.field{
+  width: min-content;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 400;
+
+  &__input,
+  &__textarea,
+  &__select{
+    width: 100%;
+    box-sizing: border-box;
+    height: 55px;
+    padding: 0 20px;
+    display: block;
+    color: @black;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: @white;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &__textarea{
+    height: 149px;
+    padding: 16.5px 20px;
+  }
+
+  &__input{
+    &--day{
+      width: 55px;
+      padding: 0 16px;
+    }
+    &--month{
+      width: 55px;
+      padding: 0 13px;
+    }
+    &--year{
+      width: 110px;
+      padding: 0 38px;
+    }
+  }
+}
