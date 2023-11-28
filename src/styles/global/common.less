@@ -11,11 +11,11 @@ body{
   padding-top: 147px;
   min-height: 100vh;
   font-family: @font1;
-  font-size: 16px;
+  font-size: @font_size;
+  font-weight: 400;
   color: @black;
+  background-color: @gray;
   background: url('../assets/images/noise.png'), url('../assets/images/gradient.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .main{
@@ -27,7 +27,7 @@ body{
 }
 
 a{
-  color: #1F1E1E;
+  color: @black;
   outline: none;
 }
 
@@ -35,4 +35,12 @@ img{
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+button{
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+  cursor: pointer;
 }
