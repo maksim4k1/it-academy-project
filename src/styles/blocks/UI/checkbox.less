@@ -1,5 +1,6 @@
 .checkbox{
   height: 24px;
+  cursor: pointer;
 
   &--red{
     .checkbox__input:checked + .checkbox__label::before {
@@ -26,7 +27,6 @@
     
     &:disabled + .checkbox__label{
       opacity: 0.5;
-      cursor: auto;
     }
 
     &:checked + .checkbox__label::before {
@@ -44,7 +44,6 @@
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    cursor: pointer;
 
     &::before {
       content: "";

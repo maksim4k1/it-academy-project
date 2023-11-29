@@ -4,7 +4,7 @@
   <div class="page-footer__container">
     <div class="page-footer__main">
       <nav class="page-footer__nav">
-        <a href="/events.html" class="page-footer__link">Календарь мероприятий</a>
+        <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
         <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
         <a href="#" class="page-footer__link">Стать арендатором</a>
         <a href="#" class="page-footer__link">Наши проекты</a>
@@ -17,7 +17,7 @@
           <input type="text" class="page-footer__form-input" placeholder="Email"/>
           <button class="page-footer__form-button" type="submit">Подписаться</button>
         </label>
-        @@include('./checkbox.html', {"class": "page-footer__checkbox", "id": "subscribe", "name": "subscribe", "label": "Согласен на обработку персональных данных", "checked": "checked"})
+        @@include('./checkbox.html', {"class": "page-footer__checkbox", "name": "subscribe", "label": "Согласен на обработку персональных данных", "checked": "checked"})
       </form>
     </div>
 
