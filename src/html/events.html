@@ -4,7 +4,7 @@
   <body>
     @@include('blocks/page-header.html')
     <main class="main">
-      <div class="events">
+      <section class="events">
         <div class="events__container">
           <div class="events__breads breads">
             <a href="./" class="events__breads-link breads__link">Главная</a> / Мероприятия</div>
@@ -73,8 +73,22 @@
               },
             ])
           </div>
+          <button class="events__button">
+            <span class="events__button-title">Показать еще</span>
+            <svg class="events__button-icon">
+              <use id="s" xlink:href="./assets/icons/symbols.svg#arrow"></use>
+            </svg>
+          </button>
         </div>
-      </div>
+      </section>
+      <section class="services">
+        <div class="services__container">
+          <h2 class="services__title title">дополнительные  услуги</h2>
+          <p class="services__info">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что<br/>все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная<br/>работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+          
+          @@include('blocks/table.html')
+        </div>
+      </section>
     </main>
     @@include('blocks/page-footer.html')
   </body>

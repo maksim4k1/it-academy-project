@@ -1,4 +1,6 @@
 .events{
+  margin-bottom: 100px;
+  
   &__container{
     .container();
 
@@ -7,10 +9,43 @@
 
   &__title{
     margin-top: 138px;
-    text-transform: uppercase;
   }
 
   &__event-card{
     width: calc((100% / 3) - 40px);
+  }
+
+  &__button{
+    padding: 0 7px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 18px;
+    background-color: transparent;
+    transition: color 0.2s;
+
+    &-title{
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &-icon{
+      height: 91px;
+      width: 60px;
+      fill: @black;
+      stroke: @black;
+
+      transition: fill 0.2s, stroke 0.2s;
+    }
+
+    &:hover{
+      color: @red_hover;
+
+      .events__button-icon {
+        fill: @red_hover;
+        stroke: @red_hover;
+      }
+    }
   }
 }
