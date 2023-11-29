@@ -1,1 +1,54 @@
-<footer class="page-footer"></footer>
+<footer class="page-footer">
+  @@include('./modal.html')
+
+  <div class="page-footer__container">
+    <div class="page-footer__main">
+      <nav class="page-footer__nav">
+        <a href="/events.html" class="page-footer__link">Календарь мероприятий</a>
+        <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
+        <a href="#" class="page-footer__link">Стать арендатором</a>
+        <a href="#" class="page-footer__link">Наши проекты</a>
+        <a href="#" class="page-footer__link">Контакты</a>
+      </nav>
+  
+      <form class="page-footer__form">
+        <label class="page-footer__form-label">
+          <span class="page-footer__form-span">Подпишись и будь в курсе происходящего</span>
+          <input type="text" class="page-footer__form-input" placeholder="Email"/>
+          <button class="page-footer__form-button" type="submit">Подписаться</button>
+        </label>
+        @@include('./checkbox.html', {"class": "page-footer__checkbox", "id": "subscribe", "name": "subscribe", "label": "Согласен на обработку персональных данных", "checked": "checked"})
+      </form>
+    </div>
+
+    <div class="page-footer__other">
+      <div class="page-footer__confirmations">
+        <p class="page-footer__right">© Millennials 2022</p>
+        <a href="#" class="page-footer__confirmation">Политика конфиденциальности</a>
+        <a href="#" class="page-footer__confirmation">Cookies</a>
+      </div>
+
+      <div class="page-footer__socials">
+        <a href="#" class="page-footer__socials-link">
+          <svg class="page-footer__socials-icon">
+            <use xlink:href="./assets/icons/symbols.svg#insta"></use>
+          </svg>
+        </a>
+        <a href="#" class="page-footer__socials-link">
+          <svg class="page-footer__socials-icon">
+            <use xlink:href="./assets/icons/symbols.svg#vk"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="page-footer__creator">
+        <a href="https://tagree.ru/" target="_blank" class="page-footer__creator-link">
+          <span class="page-footer__creator-span">Создание и продвижение</span>
+          <img src="./assets/images/tagree.svg" alt="" class="page-footer__creator-icon"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/modal.js"></script>
+</footer>
