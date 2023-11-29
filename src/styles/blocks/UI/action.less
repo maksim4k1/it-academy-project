@@ -1,0 +1,33 @@
+.action {
+  .width-624;
+  margin: 0 auto;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__title {
+    margin: 0 0 46px 18px;
+    font-family: @font2;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  &__button{
+    &--red {
+      color: @white;
+      background: @red;
+      border-color: @red;
+      &:hover {
+        background-color: @red_hover;
+        border-color: @red_hover;
+      }
+    }
+
+    &--white {
+      padding: 15px 43px;
+    }
+  }
+}

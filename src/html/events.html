@@ -84,12 +84,41 @@
       <section class="services">
         <div class="services__container">
           <h2 class="services__title title">дополнительные  услуги</h2>
-          <p class="services__info">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что<br/>все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная<br/>работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+          <p class="services__label">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что<br/>все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная<br/>работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
           
           @@include('blocks/table.html')
+
+          @@include('blocks/action.html', {"class": "services__buttons"})
+
+          <div class="services__info">
+            <div class="services__info-item">
+              <picture class="services__info-picture">
+                <img src="./assets/images/information.svg" alt="Цены" class="services__info-icon">
+              </picture>
+              <h6 class="services__info-subtitle">Цены</h6>
+              <p class="services__info-data">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+            </div>
+            <div class="services__info-item">
+              <picture class="services__info-picture">
+                <img src="./assets/images/contact.svg" alt="Контакты" class="services__info-icon">
+              </picture>
+              <h6 class="services__info-subtitle">Контакты</h6>
+              <p class="services__info-data">Отдел организации мероприятий<br/>+7 499 350 0730<br/>hi@tagree.ru</p>
+            </div>
+            <div class="services__info-item">
+              <picture class="services__info-picture">
+                <img src="./assets/images/handshake.svg" alt="Преимущество" class="services__info-icon">
+              </picture>
+              <h6 class="services__info-subtitle">Преимущество</h6>
+              <p class="services__info-data">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
     @@include('blocks/page-footer.html')
+
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>

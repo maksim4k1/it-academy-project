@@ -10,7 +10,7 @@
     letter-spacing: 0.44px;
   }
 
-  &__info{
+  &__label{
     margin-bottom: 60px;
     font-size: 16px;
     font-weight: 400;
@@ -18,5 +18,45 @@
 
   &__table{
     margin-bottom: 50px;
+  }
+
+  &__buttons{
+    margin-bottom: 100px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-item{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__info-picture {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @black;
+  }
+
+  &__info-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__info-subtitle {
+    margin: 40px 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__info-data {
+    width: 401px;
+    text-align: center;
   }
 }

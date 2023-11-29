@@ -10,16 +10,8 @@
       </picture>
       <p class="main-header__text">для людей, горящих сердцем и делом<br/>место для настоящего</p>
     
-      <div class="main-header__buttons">
-        <div class="main-header__buttons-title">Я хочу:</div>
-        <div class="main-header__buttons-container">
-          <button class="main-header__button main-header__button--red button" id="open-modal-button">Провести мероприятие</button>
-          <button class="main-header__button main-header__button--white button">Стать арендатором</button>
-        </div>
-      </div>
+      @@include('blocks/action.html', {"class": "main-header__buttons"})
     </header>
-
-    @@include('blocks/modal.html')
 
     <main class="main">
       <div class="home">
