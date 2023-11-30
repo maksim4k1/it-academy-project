@@ -1,6 +1,6 @@
 <div class="modal" id="modal">
   <div class="modal__wrapper">
-    <button class="modal__x-button x-button" id="close-modal-button"></button>
+    <button class="modal__x-button x-button" id="close-modal-button"><span class="x-button__mark"></span></button>
     
     <div class="modal__container">
       <h2 class="modal__title">Заполните форму<br/>и мы подберем площадку </h2>
@@ -31,15 +31,17 @@
           </div>
 
           <h4 class="form__subtitle">Дата проведения:</h4>
-          <div class="form__elements form__elements--min-content">
-            <label class="form__field field">
+          <div class="form__elements form__elements">
+            <label class="form__field field field--ff-row">
               <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
-            </label>
-            <label class="form__field field">
               <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
+              <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
             </label>
             <label class="form__field field">
-              <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
+              
+            </label>
+            <label class="form__field field">
+              
             </label>
           </div>
         </div>

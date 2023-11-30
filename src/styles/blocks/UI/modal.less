@@ -36,16 +36,32 @@
     max-width: 1210px;
     width: 100%;
     height: min-content;
-    padding: 110px 170px 40px;
     background-color: @gray;
     background-image: url("../assets/images/noise.png");
     background-repeat: repeat;
   }
 
+  &__container{
+    padding: 110px 170px 40px;
+  }
+
   &__x-button {
-    position: absolute;
-    top: -30px;
-    right: -33px;
+    position: sticky;
+    top: 10px;
+    margin-left: 100%;
+
+    &::before{
+      top: -46px;
+      right: -20px;
+    }
+
+    & > .x-button__mark{
+      &::before,
+      &::after{
+        top: -25px;
+        right: 9px;
+      }
+    }
   }
 
   &__title {
