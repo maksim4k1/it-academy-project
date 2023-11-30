@@ -49,9 +49,10 @@
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.2s;
-
-    &:hover{
-      color: @red_hover;
+    @media (hover:hover){
+      &:hover{
+        color: @red_hover;
+      }
     }
   }
 
@@ -67,13 +68,11 @@
     background: none;
     border: none;
     transition: color 0.2s;
-
-    &:hover{
-      color: @red_hover;
+    @media (hover:hover){
+      &:hover{
+        color: @red_hover;
+      }
     }
-  }
-
-  &__form {
   }
 
   &__form-label {
@@ -108,9 +107,10 @@
     font-size: 14px;
     background-color: @black;
     transition: background-color 0.2s;
-
-    &:hover{
-      background-color: @red_hover;
+    @media (hover:hover){
+      &:hover{
+        background-color: @red_hover;
+      }
     }
   }
 
@@ -143,9 +143,10 @@
     font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
-
-    &:hover{
-      color: @red_hover;
+    @media (hover:hover){
+      &:hover{
+        color: @red_hover;
+      }
     }
   }
 
@@ -158,9 +159,10 @@
 
   &__socials-link{
     height: 58px;
-
-    &:hover > .page-footer__socials-icon{
-      fill: @red_hover;
+    @media (hover:hover){
+      &:hover > .page-footer__socials-icon{
+        fill: @red_hover;
+      }
     }
   }
 

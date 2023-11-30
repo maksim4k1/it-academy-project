@@ -76,10 +76,12 @@
       border: none;
       transition: color 0.2s, text-decoration-color 0.2s;
 
-      &:hover{
-        color: @red_hover;
-        text-decoration-color: @red_hover;
-        background-color: transparent;
+      @media (hover:hover){
+        &:hover{
+          color: @red_hover;
+          text-decoration-color: @red_hover;
+          background-color: transparent;
+        }
       }
     }
   }

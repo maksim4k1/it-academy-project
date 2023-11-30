@@ -6,9 +6,11 @@
     text-decoration: none;
     color: @black;
 
-    &:hover>.event-card__title{
-      color: @red;
-      text-decoration-color: @red;
+    @media (hover:hover){
+      &:hover>.event-card__title{
+        color: @red;
+        text-decoration-color: @red;
+      }
     }
   }
 

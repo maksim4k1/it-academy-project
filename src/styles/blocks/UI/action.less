@@ -20,9 +20,12 @@
       color: @white;
       background: @red;
       border-color: @red;
-      &:hover {
-        background-color: @red_hover;
-        border-color: @red_hover;
+
+      @media (hover:hover){
+        &:hover {
+          background-color: @red_hover;
+          border-color: @red_hover;
+        }
       }
     }
 

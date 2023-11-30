@@ -17,12 +17,14 @@
     background-color: transparent;
     transition: color 0.2s;
 
-    &:hover{
-      color: @red_hover;
-  
-      .events-list__button-icon {
-        fill: @red_hover;
-        stroke: @red_hover;
+    @media (hover:hover){
+      &:hover{
+        color: @red_hover;
+    
+        .events-list__button-icon {
+          fill: @red_hover;
+          stroke: @red_hover;
+        }
       }
     }
   }
