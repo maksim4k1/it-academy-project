@@ -7,14 +7,6 @@
   line-height: 1.375;
   word-wrap: break-word;
 
-  &__programm{
-    margin-bottom: 75px;
-  }
-
-  &__description{
-    margin-bottom: 50px;
-  }
-
   h1,
   h2,
   h3,
@@ -31,10 +23,6 @@
     }
     &:last-child{
       margin-bottom: 0;
-    }
-
-    &.bold{
-      font-weight: 700;
     }
   }
 
@@ -106,12 +94,6 @@
   ol{
     counter-reset: li;
     padding: 0;
-
-    &.simple > li{
-      &::before{
-        color: @black;
-      }
-    }
   }
 
   ol > li{
