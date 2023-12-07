@@ -1,0 +1,61 @@
+<section class="upcoming home__upcoming">
+  <div class="upcoming__container">
+    <h2 class="upcoming__title title">Мероприятия</h2>
+    <div class="upcoming__list listing">
+      @@loop("./event-card.html", [
+                {
+                  "class": "events-list__event-card",
+                  "link": "./event.html",
+                  "image": "./assets/images/nirvana.jpg",
+                  "alt": "nirvana",
+                  "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+                  "description": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                  "datetime": "2022-12-07T18:00",
+                  "time": "07.12.2022 | начало 18.00",
+                },
+                {
+                  "class": "events-list__event-card",
+                  "link": "./event.html",
+                  "image": "./assets/images/stuff.jpg",
+                  "alt": "HowStuffWorks",
+                  "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                  "description": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                  "datetime": "2022-12-14T18:30",
+                  "time": "14.12.2022 | начало 18.30",
+                },
+                {
+                  "class": "events-list__event-card",
+                  "link": "./event.html",
+                  "image": "./assets/images/sade.jpg",
+                  "alt": "sade",
+                  "title": "Вечер | The Best of Sade",
+                  "description": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                  "datetime": "2022-12-16T20:00",
+                  "time": "16.12.2022 | начало 20.00",
+                },
+              ])
+    </div>
+    <div class="upcoming__swiper">
+      <button class="upcoming__button">
+        <svg class="upcoming__icon">
+          <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </button>
+      <div class="upcoming__swipe-sections">
+        <span class="upcoming__swipe-section"></span>
+        <span class="upcoming__swipe-section"></span>
+        <span class="upcoming__swipe-section upcoming__swipe-section--active"></span>
+        <span class="upcoming__swipe-section"></span>
+        <span class="upcoming__swipe-section"></span>
+      </div>
+      <button class="upcoming__button">
+        <svg class="upcoming__icon upcoming__icon--rotate-right">
+          <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="upcoming__link-container">
+      <a href="./events.html" class="upcoming__link">Смотреть все</a>
+    </div>
+  </div>
+</section>

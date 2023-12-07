@@ -1,0 +1,123 @@
+.upcoming {
+  position: relative;
+  margin: 124px 0 99px;
+  padding: 86px 0 51px;
+  background-color: @white_60;
+
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: 0;
+    display: block;
+    border-bottom: 34px solid @white_60; 
+    border-right: 37vw solid transparent;
+  }
+
+  &::after{
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-bottom: 34px solid @white_60; 
+    border-left: 63vw solid transparent;	
+  }
+
+  &__container {
+    .container;
+
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      bottom: -34px;
+      left: 0;
+      display: block;
+      border-top: 34px solid @white_60; 
+      border-right: 64vw solid transparent;	
+    }
+  
+    &::after{
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-top: 34px solid @white_60; 
+      border-left: 36vw solid transparent;	
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__swiper {
+    width: 525px;
+    height: 60px;
+    margin: 70px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: none;
+    overflow: hidden;
+
+    @media(hover: hover){
+      &:hover{
+        & > .upcoming__icon{
+          stroke: @red_hover;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    stroke: @black;
+    width: 90px;
+    height: 90px;
+    transform: rotate(90deg);
+    transition: stroke 0.2s;
+
+    &--rotate-right{
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__swipe-sections {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  &__swipe-section {
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: @gray_disabled;
+
+    &--active {
+      background-color: @black;
+    }
+  }
+
+  &__link-container{
+    width: 150px;
+    margin-left: auto;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 15px 0 15px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    @media(hover: hover){
+      &:hover{
+        color: @red_hover;
+      }
+    }
+  }
+}

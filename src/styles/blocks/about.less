@@ -1,5 +1,4 @@
 .project {
-
   &__container {
     .container;
   }
@@ -121,11 +120,13 @@
     overflow: hidden;
     cursor: pointer;
 
-    &:hover{
-      color: @red_hover;
+    @media(hover: hover){
+      &:hover{
+        color: @red_hover;
 
-      & > .project__link-icon{
-        stroke: @red_hover;
+        & > .project__link-icon{
+          stroke: @red_hover;
+        }
       }
     }
   }
