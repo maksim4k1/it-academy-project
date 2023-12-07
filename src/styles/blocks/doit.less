@@ -1,0 +1,29 @@
+.doit{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 308px;
+  font-family: @font3;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: right;
+
+  &::before{
+    content: "Просто делайте, что нравится,";
+    position: absolute;
+    top: 0;
+    width: 2161px;
+    margin-left: 150px;
+    display: block;
+  }
+
+  &::after{
+    content: "а мы вам поможем";
+    position: absolute;
+    bottom: 0;
+    width: 2161px;
+    margin-left: 150px;
+    display: block;
+  }
+}
