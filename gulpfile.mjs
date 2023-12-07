@@ -31,7 +31,7 @@ const resources ={
     "src/assets/icons/**/*.",
     "src/assets/fonts/**/*.{woff, woff2}",
   ],
-  images: "src/assets/images/**/*.{jpg,png,jpeg,webp,gif,svg}",
+  images: "src/assets/images/**/*.{jpg,png,jpeg,webp,gif,svg,ico}",
   svgSprite: "src/assets/svg-sprites/**/*.svg",
 }
 

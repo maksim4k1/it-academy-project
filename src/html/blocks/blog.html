@@ -1,0 +1,44 @@
+<section class="blog home__blog">
+  <div class="blog__container">
+    <h2 class="blog__title title">Блог</h2>
+
+    <div class="blog__list">
+      @@loop('./blog-card.html', [
+        {
+          "class": "blog__blog-card",
+          "link": "#",
+          "image": "./assets/images/photosession.jpg",
+          "alt": "photosession",
+          "datetime": "2022-11-26",
+          "time": "26.11.2022",
+          "title": "Фотосессия в стенах Театра драмы",
+          "description": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было"
+        },
+        {
+          "class": "blog__blog-card",
+          "link": "#",
+          "image": "./assets/images/vr.jpg",
+          "alt": "vr",
+          "datetime": "2022-11-05",
+          "time": "05.11.2022",
+          "title": "Выставка VR в Томске",
+          "description": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске."
+        },
+        {
+          "class": "blog__blog-card",
+          "link": "#",
+          "image": "./assets/images/rocking_radio.jpg",
+          "alt": "rocking radio",
+          "datetime": "2022-11-01",
+          "time": "01.11.2022",
+          "title": "Rocking radio в заброшенном ангаре",
+          "description": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска."
+        },
+      ])
+    </div>
+
+    <div class="blog__link-container">
+      <a href="#" class="blog__link">Смотреть все</a>
+    </div>
+  </div>
+</section>

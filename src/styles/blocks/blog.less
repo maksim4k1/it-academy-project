@@ -1,0 +1,51 @@
+.blog {
+
+  &__container {
+    .container;
+  }
+
+  &__list {
+    margin-bottom: 70px;
+    display: flex;
+    flex-flow: column;
+    gap: 120px;
+  }
+
+  &__blog-card{
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: 40px;
+      display: block;
+      width: calc(100% - 80px);
+      height: 1px;
+      background-color: @black;
+    }
+
+    &:last-child::after{
+      display: none;
+    }
+  }
+
+  &__link-container {
+    width: 150px;
+    margin-left: auto;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 15px 0 15px 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    @media (hover: hover){
+      &:hover{
+        color: @red_hover;
+      }
+    }
+  }
+}
