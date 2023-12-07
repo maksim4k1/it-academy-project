@@ -43,13 +43,19 @@
     margin-right: auto;
     display: inline-flex;
     align-items: center;
+    max-width: calc(100% - 39px);
     gap: 15px;
+    word-break: break-word;
 
     &::before {
       content: "";
       box-sizing: border-box;
       display: block;
+      max-width: 24px;
+      min-width: 24px;
       width: 24px;
+      max-height: 24px;
+      min-height: 24px;
       height: 24px;
       border: 1px solid @black;
       background-position: center;
@@ -64,7 +70,7 @@
       display: block;
       position: absolute;
       left: 8px;
-      top: 3px;
+      top: calc(50% - 8px);
       width: 6px;
       height: 12px;
       border-right: 2px solid @white;

@@ -15,6 +15,7 @@
     margin: 0 0 10px;
     font-size: 18px;
     font-weight: 700;
+    word-break: break-word;
   }
 
   &__elements {
@@ -45,6 +46,7 @@
   }
 
   &__radio{
+    max-width: 100%;
     width: min-content;
     white-space: nowrap;
   }
@@ -55,6 +57,10 @@
     &--half-width{
       width: calc(50% - 30px);
     }
+  }
+
+  &__checkbox{
+    font-size: 14px;
   }
 
   &__buttons{
