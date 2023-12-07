@@ -58,6 +58,19 @@
 
   &__item-text {
     margin: 0;
+
+    &--link{
+      display: inline-block;
+      margin-right: auto;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      @media (hover: hover){
+        &:hover{
+          color: @red_hover;
+        }
+      }
+    }
   }
 
   &__map {

@@ -113,20 +113,18 @@
   }
 
   &__link {
-    display: inline-flex;
-    height: 60px;
+    height: 0;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 128px;
     text-decoration: none;
-    overflow: hidden;
     cursor: pointer;
 
     @media(hover: hover){
       &:hover{
         color: @red_hover;
 
-        & > .project__link-icon{
+        & .project__link-icon{
           stroke: @red_hover;
         }
       }
@@ -138,6 +136,14 @@
     width: 125px;
     font-weight: 600;
     transition: color 0.2s;
+  }
+
+  &__link-icon-container{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
   }
 
   &__link-icon {
