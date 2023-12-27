@@ -1,30 +1,24 @@
 .doit{
   position: relative;
-  margin-bottom: -50px;
-  display: flex;
-  justify-content: center;
-  height: 308px;
-  font-family: @font3;
-  font-size: 128px;
-  font-weight: 700;
-  line-height: 120%;
-  text-align: right;
+  left: -2.7vw;
+  width: 112.55vw;
 
-  &::before{
-    content: "Просто делайте, что нравится,";
-    position: absolute;
-    top: 0;
-    width: 2161px;
-    margin-left: 135px;
-    display: block;
-  }
+  &__text{
+    font-family: @font3;
+    font-size: 6.666vw;
+    font-weight: 700;
+    line-height: 120%;
 
-  &::after{
-    content: "а мы вам поможем";
-    position: absolute;
-    bottom: 0;
-    width: 2161px;
-    margin-left: 135px;
-    display: block;
+    &--first{
+      display: inline;
+    }
+
+    &--second{
+      display: inline;
+    }
+
+    &--third{
+      text-align: end;
+    }
   }
 }
