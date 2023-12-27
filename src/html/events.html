@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" id="html">
   @@include('./blocks/head.html')
   <body>
     @@include('./blocks/page-header.html')
@@ -76,7 +76,7 @@
                 },
               ])
             </div>
-            <button class="events-list__button">
+            <button type="button" class="events-list__button">
               <span class="events-list__button-title">Показать еще</span>
               <svg class="events-list__button-icon">
                 <use id="s" xlink:href="./assets/icons/symbols.svg#arrow"></use>
@@ -120,7 +120,8 @@
         </section>
       </div>
     </main>
-
     @@include('./blocks/page-footer.html')
+    @@include('./blocks/modal.html')
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>
