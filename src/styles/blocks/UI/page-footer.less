@@ -9,7 +9,7 @@
     padding-bottom: 75px;
     display: flex;
     flex-flow: column;
-    gap: 100px;
+    gap: 60px;
 
     &::before, &::after{
       content: "";
@@ -33,6 +33,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: @w_630){
+      flex-flow: column;
+      gap: 59px;
+    }
   }
 
   &__nav {
@@ -41,6 +46,10 @@
     flex-flow: column;
     gap: 23px;
     border-left: 4px solid @red;
+
+    @media (max-width: @w_740){
+      font-size: 14px;
+    }
   }
 
   &__link {
@@ -61,6 +70,15 @@
     margin-bottom: 15px;
     display: flex;
     flex-flow: wrap;
+
+    @media (max-width: @w_740){
+      width: 300px;
+    }
+
+    @media (max-width: @w_420){
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
   }
 
   &__form-span {
@@ -69,6 +87,18 @@
     margin-bottom: 14px;
     font-weight: 600;
     word-break: break-word;
+
+    @media (max-width: @w_740){
+      font-size: 13px;
+    }
+
+    @media (max-width: @w_630){
+      margin-left: 0;
+    }
+
+    @media (max-width: @w_420){
+      margin-left: 20px;
+    }
   }
 
   &__form-input {
@@ -79,11 +109,19 @@
     font-size: 14px;
     background-color: @white;
     border: none;
+
+    @media (max-width: @w_740){
+      width: calc(100% - 116px);
+      height: 46px;
+      padding: 20px;
+      font-size: 12px;
+    }
   }
 
   &__form-button {
     min-width: 135px;
     max-width: 135px;
+    padding: 0;
     width: 135px;
     height: 49px;
     color: @white;
@@ -95,17 +133,45 @@
         background-color: @red_hover;
       }
     }
+
+    @media (max-width: @w_740){
+      min-width: 116px;
+      max-width: 116px;
+      height: 46px;
+      font-size: 12px;
+    }
   }
 
   &__checkbox{
     font-size: 14px;
     font-weight: 300;
+
+    @media (max-width: @w_740){
+      display: block;
+      min-width: 280px;
+      font-size: 12px;
+    }
   }
 
   &__other {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-flow: wrap;
+    
+    @media (max-width: @w_1024){
+      gap: 60px;
+    }
+    @media (max-width: @w_740){
+      align-items: flex-start;
+      justify-content: center;
+      flex-flow: column;
+      gap: 5px;
+    }
+
+    @media (max-width: @w_1024){
+      font-size: 14px;
+    }
   }
 
   &__confirmations {
@@ -113,12 +179,41 @@
 
     & > .page-footer__confirmation:last-child{
       margin-left: 55px;
+      @media (max-width: @w_1140){
+        margin-left: 15px;
+      }
+
+      @media (max-width: @w_740){
+        margin-left: 0;
+        margin-top: 4px;
+      }
+    }
+
+    @media (max-width: @w_1140){
+      width: 360px;
+    }
+
+    @media (max-width: @w_1024){
+      width: auto;
+    }
+
+    @media (max-width: @w_740){
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      gap: 16px;
     }
   }
 
   &__right {
     width: 100%;
     margin: 0 0 20px;
+
+    @media (max-width: @w_740){
+      margin: 0;
+      text-align: end;
+      order: 2;
+    }
   }
 
   &__confirmation {
@@ -137,7 +232,18 @@
     width: 160px;
     height: min-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 44px;
+    
+    @media (max-width: @w_1024){
+      width: 100%;
+      order: -1;
+    }
+
+    @media (max-width: @w_740){
+      margin-bottom: 55px;
+      gap: 30px;
+    }
   }
 
   &__socials-link{
@@ -160,6 +266,18 @@
     width: 400px;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: @w_1140){
+      width: 360px;
+    }
+
+    @media (max-width: @w_1024){
+      width: auto;
+    }
+
+    @media (max-width: @w_740){
+      width: 100%;
+    }
   }
 
   &__creator-link{
