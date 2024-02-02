@@ -6,6 +6,14 @@
   height: 147px;
   z-index: 100;
 
+  @media (max-width: @w_1340) {
+    height: 111px;
+  }
+
+  @media (max-width: @w_420) {
+    height: 70px;
+  }
+
   &::before{
     content: "";
     position: absolute;
@@ -23,6 +31,10 @@
 
   &__container {
     .container();
+
+    @media (max-width: @w_420) {
+      padding-left: 0;
+    }
     
     height: 100%;
     display: flex;
@@ -32,11 +44,21 @@
 
   &__logo {
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
   }
 
   &__logo-icon {
     width: 202px;
     height: 100%;
+
+    @media (max-width: @w_1340) {
+      width: 152px;
+    }
+
+    @media (max-width: @w_420) {
+      width: 96px;
+    }
   }
 
   &__nav {
@@ -44,6 +66,52 @@
     padding: 61px 0;
     justify-content: center;
     gap: 50px;
+
+    @media (max-width: @w_1024){
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 211px 30px 100px;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 40px;
+      z-index: -1;
+      transform: translateY(-100vh);
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: 0.4s, 0s, 0s;
+      transition-delay: 0s, 0.4s, 0.4s;
+      transition-property: transform, opacity, visibility;
+    
+      &:before{
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @supports(backdrop-filter: blur(10px)){
+          backdrop-filter: blur(10px);
+          background: @gray_80;
+        }
+        z-index: -1;
+      }
+
+      &.page-header__nav--opened{
+        transition-delay: 0s, 0s, 0s;
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: @w_420) {
+      padding: 149px 20px 79px;
+    }
   }
 
   &__nav-link {
@@ -58,15 +126,155 @@
         color: @red;
       }
     }
+
+    @media (max-width: @w_1024){
+      font-size: 16px;
+    }
+
+    &--login{
+      display: none;
+
+      @media (hover:hover){
+        &:hover>.page-header__nav-link-icon{
+          stroke: @red_hover;
+        }
+      }
+
+      @media (max-width: @w_1024){
+        display: inline-flex;
+        align-items: center;
+        gap: 25px;
+      }
+    }
+
+    &-icon{
+      width: 24px;
+      height: 24px;
+      stroke: @black;
+      stroke-width: 2px;
+      transition: stroke 0.2s;
+    }
   }
 
-  &__user-button-container {
+  &__buttons-container {
     width: 202px;
-    height: 54px;
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 23px;
+
+    @media (max-width: @w_1340) {
+      width: 152px;
+    }
   }
 
   &__user-button {
     text-decoration: none;
+
+    @media (max-width: @w_1024){
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      padding: 8px;
+      box-sizing: content-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none !important;
+
+      @media (hover:hover){
+        &:hover>&--sw{
+          fill: @red;
+        }
+      }
+    }
+
+    &--bw{
+      @media (max-width: @w_1024){
+        .is-hidden();
+      }
+    }
+
+    &--sw{
+      width: 100%;
+      height: 100%;
+      display: none;
+      fill: @black;
+      transition: fill 0.2s;
+
+      @media (max-width: @w_1024){
+        display: block;
+      }
+    }
+  }
+
+  &__burger-button {
+    position: relative;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    display: none;
+    background: none;
+
+    @media (hover:hover){
+      &:hover{
+        &::before, &::after{
+          background-color: @red;
+        }
+
+        &>.page-header__burger-span{
+          background-color: @red;
+        }
+      }
+    }
+
+    @media (max-width: @w_1024){
+      display: block;
+    }
+
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 13px;
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 1.5px;
+      background-color: @black;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    &::after{
+      top: auto;
+      bottom: 13px;
+    }
+
+    &.page-header__burger-button--close{
+      &::before{
+        transform: translateY(6px) rotate(45deg);
+      }
+      &::after{
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      &>.page-header__burger-span{
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__burger-span{
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    width: 20px;
+    height: 2px;
+    border-radius: 1.5px;
+    background-color: @black;
+    transition: background-color 0.2s, transform 0.2s;
   }
 }
