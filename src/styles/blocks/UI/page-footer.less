@@ -19,13 +19,30 @@
       width: calc(40% - 49px);
       height: 2px;
       background: @black_linear;
-      border-radius: 1px;
     }
     
     &::after{
       left: auto;
       right: 10%;
       transform: rotate(180deg);
+    }
+
+    @media (max-width: @w_1024){
+      &::before, &::after{
+        width: calc(40% - 25px);
+      }
+    }
+
+    @media (max-width: @w_768){
+      padding-bottom: 65px;
+    }
+
+    @media (max-width: @w_420){
+      padding-bottom: 50px;
+
+      &::before, &::after{
+        width: calc(40% - 10px);
+      }
     }
   }
 
