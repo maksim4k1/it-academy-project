@@ -2,6 +2,10 @@
   width: 100%;
   min-height: 290px;
 
+  @media (max-width: @w_1024){
+    min-height: auto;
+  }
+
   &__link {
     display: flex;
     gap: 60px;
@@ -21,6 +25,18 @@
         stroke: @red_hover;
       }
     }
+
+    @media (max-width: @w_1180){
+      gap: 40px;
+    }
+
+    @media (max-width: @w_1024){
+      gap: 26px;
+    }
+
+    @media (max-width: @w_920){
+      flex-flow: wrap;
+    }
   }
 
   &__picture {
@@ -28,6 +44,19 @@
     position: relative;
     width: 467px;
     transition: box-shadow 0.2s;
+
+    @media (max-width: @w_1180){
+      width: 360px;
+    }
+
+    @media (max-width: @w_1024){
+      width: 300px;
+    }
+
+    @media (max-width: @w_920){
+      width: 100%;
+      height: 439px;
+    }
 
     &::before{
       content: "";
@@ -37,6 +66,10 @@
       left: 0;
       display: block;
       padding-top: 62.313%;
+
+      @media (max-width: @w_920){
+        padding-top: 439px;
+      }
     }
   }
 
@@ -53,6 +86,26 @@
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: @w_1180){
+      width: calc(100% - 400px);
+    }
+    
+    @media (max-width: @w_1024){
+      width: calc(100% - 320px);
+      padding: 20px 0;
+    }
+
+    @media (max-width: @w_920){
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__info{
+    @media (max-width: @w_920){
+      width: 536px;
+    }
   }
 
   &__datetime {
@@ -68,12 +121,26 @@
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color 0.2s, color 0.2s;
+
+    @media (max-width: @w_1180){
+      font-size: 20px;
+    }
+
+    @media (max-width: @w_1024){
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
   }
 
   &__description {
     width: 467px;
     margin: 0;
     word-break: break-word;
+    line-height: 22px;
+
+    @media (max-width: @w_920){
+      width: 100%;
+    }
   }
 
   &__icon-container{
@@ -85,6 +152,13 @@
     align-items: center;
     margin-top: auto;
     overflow: hidden;
+
+    @media (max-width: @w_1180){
+      min-width: 60px;
+      max-width: 60px;
+      width: 60px;
+      height: 42px;
+    }
   }
 
   &__icon {
@@ -93,5 +167,10 @@
     stroke: @black;
     transform: rotate(-90deg);
     transition: stroke 0.2s;
+
+    @media (max-width: @w_1180){
+      width: 60px;
+      height: 60px;
+    }
   }
 }

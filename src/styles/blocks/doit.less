@@ -8,7 +8,13 @@
     padding-top: 83px;
   }
 
+  @media (max-width: @w_1024){
+    width: 113.67vw;
+    padding-top: 50px;
+  }
+
   &__text{
+    position: relative;
     font-family: @font3;
     font-size: 128px;
     font-weight: 700;
@@ -18,16 +24,37 @@
       font-size: 6.666vw;
     }
 
+    @media (max-width: @w_1024){
+      left: 2.1vw;
+      font-size: 10.417vw;
+    }
+
     &--first{
       display: inline;
+
+      @media (max-width: @w_1024){
+        left: -0.7vw;
+        display: block;
+      }
     }
 
     &--second{
       display: inline;
+
+      @media (max-width: @w_1024){
+        display: block;
+        margin: 13px 0 21px;
+        text-align: end;
+      }
     }
 
     &--third{
       text-align: end;
+
+      @media (max-width: @w_1024){
+        display: block;
+        text-align: start;
+      }
     }
   }
 }

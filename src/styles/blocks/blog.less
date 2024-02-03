@@ -4,6 +4,12 @@
     .container;
   }
 
+  &__title{
+    @media (max-width: @w_768){
+      margin-top: 68px;
+    }
+  }
+
   &__list {
     margin-bottom: 70px;
     display: flex;
@@ -13,6 +19,14 @@
     @media (max-width: @w_1340){
       gap: 111px;
       margin-bottom: 58px;
+    }
+
+    @media (max-width: @w_1024){
+      gap: 101px;
+    }
+
+    @media (max-width: @w_920){
+      margin-bottom: 40px;
     }
   }
 
@@ -32,6 +46,10 @@
       @media (max-width: @w_1340){
         width: 100%;
         left: 0;
+      }
+
+      @media (max-width: @w_1024){
+        bottom: -51px;
       }
     }
 
