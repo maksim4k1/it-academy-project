@@ -9,6 +9,11 @@
     display: flex;
     flex-flow: column;
     gap: 121px;
+
+    @media (max-width: @w_1340){
+      gap: 111px;
+      margin-bottom: 58px;
+    }
   }
 
   &__blog-card{
@@ -23,6 +28,11 @@
       width: calc(100% - 80px);
       height: 1px;
       background-color: @black;
+
+      @media (max-width: @w_1340){
+        width: 100%;
+        left: 0;
+      }
     }
 
     &:last-child::after{

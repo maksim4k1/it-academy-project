@@ -1,12 +1,20 @@
 .contacts {
   margin-bottom: 150px;
 
+  @media (max-width: @w_1340){
+    margin-bottom: 50px;
+  }
+
   &__container {
     .container;
   }
 
   &__title {
     margin-top: 78px;
+
+    @media (max-width: @w_1340){
+      margin-top: 90px;
+    }
   }
 
   &__content{
@@ -20,10 +28,13 @@
     display: flex;
     flex-flow: column;
     gap: 60px;
+
+    @media (max-width: @w_1340){
+      gap: 52px;
+    }
   }
 
   &__item {
-    padding: 4px 0; 
     display: flex;
     align-items: center;
     gap: 55px;

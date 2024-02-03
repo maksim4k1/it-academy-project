@@ -1,13 +1,22 @@
 .doit{
+  padding-top: 80px;
   position: relative;
   left: -2.7vw;
   width: 112.55vw;
 
+  @media (max-width: @w_1340){
+    padding-top: 83px;
+  }
+
   &__text{
     font-family: @font3;
-    font-size: 6.666vw;
+    font-size: 128px;
     font-weight: 700;
     line-height: 120%;
+
+    @media (max-width: @w_1920){
+      font-size: 6.666vw;
+    }
 
     &--first{
       display: inline;
