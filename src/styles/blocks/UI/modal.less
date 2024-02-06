@@ -3,8 +3,9 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 180px);
-  padding: 90px 0;
+  height: 100vh;
+  padding: 85px 40px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -16,6 +17,15 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s;
+
+  @media (max-width: @w_1024){
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  @media (max-width: @w_630){
+    padding: 79px 20px;
+  }
 
   &::-webkit-scrollbar{
     width: 7px;
@@ -40,10 +50,43 @@
     background-color: @gray;
     background-image: url("../assets/images/noise.png");
     background-repeat: repeat;
+
+    @media (max-width: @w_1340){
+      max-width: 1144px;
+    }
   }
 
   &__container{
     padding: 88px 170px 40px;
+
+    @media (max-width: @w_1340){
+      padding-left: 137px;
+      padding-right: 137px;
+    }
+    
+    @media (max-width: @w_1280){
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @media (max-width: @w_1024){
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    @media (max-width: @w_768){
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (max-width: @w_630){
+      padding-top: 66px;
+    }
+
+    @media (max-width: @w_420){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &__x-button {
@@ -51,9 +94,22 @@
     top: 10px;
     margin-left: 100%;
 
+    @media (max-width: @w_1280){
+      margin-left: calc(100% - 30px);
+    }
+
+    @media (max-width: @w_630){
+      margin-left: 100%;
+    }
+
     &::before{
       top: -46px;
       right: -20px;
+
+      @media (max-width: @w_630){
+        top: -33px;
+        right: -5px;
+      }
     }
 
     & > .x-button__mark{
@@ -61,6 +117,11 @@
       &::after{
         top: -25px;
         right: 9px;
+
+        @media (max-width: @w_630){
+          top: -22px;
+          right: 12px;
+        }
       }
     }
   }
@@ -79,5 +140,24 @@
     letter-spacing: 0.44px;
     text-transform: uppercase;
     background-color: @black;
+
+    @media (max-width: @w_1024){
+      left: 14px;
+      padding-left: 18px;
+      padding-right: 21px;
+    }
+
+    @media (max-width: @w_740){
+      width: 360px;
+    }
+
+    @media (max-width: @w_630){
+      top: -42px;
+      box-sizing: border-box;
+      width: 225px;
+      padding: 10px 20px 10px 20px;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }

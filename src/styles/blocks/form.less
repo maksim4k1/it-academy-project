@@ -3,11 +3,39 @@
   flex-flow: wrap;
   gap: 30px 60px;
 
+  @media (max-width: @w_1024){
+    gap: 30px;
+  }
+
   &__section {
     width: calc(50% - 30px);
 
+    @media (max-width: @w_1024){
+      width: calc(50% - 15px);
+    }
+
+    @media (max-width: @w_740){
+      width: 100%;
+    }
+
     &--full-width{
       width: 100%;
+
+      @media (max-width: @w_1024){
+        width: 100%;
+      }
+    }
+
+    &--checkbox{
+      @media (max-width: @w_1024){
+        margin: 3px 0 5px;
+      }
+    }
+
+    &--first{
+      @media (max-width: @w_630){
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -16,6 +44,23 @@
     font-size: 18px;
     font-weight: 700;
     word-break: break-word;
+
+    @media (max-width: @w_420){
+      font-size: 16px;
+    }
+
+    &--first{
+      @media (max-width: @w_420){
+        font-size: 18px;
+      }
+    }
+
+    &--last{
+      @media (max-width: @w_420){
+        width: 230px;
+        margin-bottom: 20px;;
+      }
+    }
   }
 
   &__elements {
@@ -42,6 +87,14 @@
       display: flex;
       flex-flow: wrap;
       gap: 30px 60px;
+
+      @media (max-width: @w_1024){
+        gap: 30px;
+      }
+
+      @media (max-width: @w_740){
+        flex-flow: column;
+      }
     }
   }
 
@@ -56,6 +109,14 @@
 
     &--half-width{
       width: calc(50% - 30px);
+
+      @media (max-width: @w_1024){
+        width: calc(50% - 15px);
+      }
+
+      @media (max-width: @w_740){
+        width: 100%;
+      }
     }
   }
 
@@ -64,16 +125,30 @@
   }
 
   &__buttons{
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
+
+    @media (max-width: @w_630){
+      flex-flow: column;
+      gap: 30px;
+    }
   }
 
   &__button{
-    height: 48px;
-    width: 400px;
+    height: 52px;
+    width: calc(50% - 30px);
+    max-width: 400px;
     display: flex;
     align-items: center;
+
+    @media (max-width: @w_1024){
+      width: calc(50% - 15px);
+    }
+
+    @media (max-width: @w_630){
+      width: 100%;
+    }
 
     &--inline{
       width: 70px;
@@ -84,6 +159,10 @@
       background-color: transparent;
       border: none;
       transition: color 0.2s, text-decoration-color 0.2s;
+
+      @media (max-width: @w_630){
+        width: 140px;
+      }
 
       @media (hover:hover){
         &:hover{

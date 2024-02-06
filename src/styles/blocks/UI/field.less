@@ -30,8 +30,12 @@
   }
 
   &__textarea{
-    height: 152px;
+    height: 150px;
     padding: 16.5px 20px;
+
+    @media (max-width: @w_630){
+      height: 234px;
+    }
   }
 
   &__input{
@@ -44,6 +48,15 @@
       width: 110px;
       padding: 0 38px;
       text-align: center;
+
+      @media (max-width: @w_420){
+        width: 100px;
+        padding: 0 33px;
+      }
     }
+  }
+
+  &__select{
+    padding: 0 15px;
   }
 }

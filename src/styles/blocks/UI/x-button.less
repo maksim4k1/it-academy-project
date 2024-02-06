@@ -21,6 +21,11 @@
     background-color: @black;
     border-radius: 50%;
     transition: background-color 0.2s;
+
+    @media (max-width: @w_630){
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__mark{
@@ -35,6 +40,10 @@
       background-color: @white;
       border-radius: 1px;
       transform: rotate(45deg);
+
+      @media (max-width: @w_630){
+        height: 14px;
+      }
     }
     &::before{
       transform: rotate(-45deg);
