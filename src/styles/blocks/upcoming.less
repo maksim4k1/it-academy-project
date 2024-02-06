@@ -15,6 +15,11 @@
     padding-bottom: 10px;
   }
 
+  @media (max-width: @w_420){
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   &::before, &::after{
     content: "";
     position: absolute;
@@ -23,6 +28,11 @@
     display: block;
     border-bottom: 34px solid @white_60; 
     border-right: 37vw solid transparent;
+
+    @media (max-width: @w_768){
+      top: -20px;
+      border-bottom-width: 20px;
+    }
   }
 
   &::after{
@@ -42,8 +52,13 @@
       bottom: -34px;
       left: 0;
       display: block;
-      border-top: 34px solid @white_60; 
-      border-right: 64vw solid transparent;	
+      border-top: 34px solid @white_60;
+      border-right: 64vw solid transparent;
+
+      @media (max-width: @w_768){
+        bottom: -20px;
+        border-top-width: 20px;
+      }
     }
   
     &::after{
@@ -51,7 +66,7 @@
       right: 0;
       border-right: none;
       border-top: 34px solid @white_60; 
-      border-left: 36vw solid transparent;	
+      border-left: 36vw solid transparent;
     }
   }
 
@@ -59,6 +74,10 @@
     margin-top: 0;
 
     @media (max-width: @w_768){
+      margin-top: 0;
+    }
+
+    @media (max-width: @w_420){
       margin-top: 0;
     }
   }
@@ -70,7 +89,7 @@
   &__swiper {
     width: 525px;
     height: 60px;
-    margin: 70px auto 0;
+    margin: 69px auto 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,6 +101,15 @@
     @media (max-width: @w_768){
       width: 300px;
       height: 40px;
+    }
+
+    @media (max-width: @w_630){
+      margin-top: 60px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: @w_420){
+      width: 100%;
     }
   }
 
@@ -107,6 +135,7 @@
     height: 90px;
     transform: rotate(90deg);
     transition: stroke 0.2s;
+    transition: stroke 0.2s;
 
     &--rotate-right{
       transform: rotate(-90deg);
@@ -122,6 +151,10 @@
     display: flex;
     justify-content: center;
     gap: 6px;
+
+    @media (max-width: @w_768){
+      gap: 3.67px;
+    }
   }
 
   &__swipe-section {
@@ -142,6 +175,10 @@
   &__link-container{
     width: 150px;
     margin-left: auto;
+
+    @media (max-width: @w_630){
+      width: 116px;
+    }
   }
 
   &__link {
@@ -155,6 +192,12 @@
       &:hover{
         color: @red_hover;
       }
+    }
+
+    @media (max-width: @w_630){
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 }

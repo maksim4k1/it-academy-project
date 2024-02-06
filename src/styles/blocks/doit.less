@@ -29,12 +29,21 @@
       font-size: 10.417vw;
     }
 
+    @media (max-width: @w_420){
+      font-size: 40px;
+    }
+
     &--first{
       display: inline;
 
       @media (max-width: @w_1024){
         left: -0.7vw;
         display: block;
+      }
+
+      @media (max-width: @w_420){
+        left: -1.5vw;
+        width: 352px;
       }
     }
 
@@ -46,6 +55,12 @@
         margin: 13px 0 21px;
         text-align: end;
       }
+
+      @media (max-width: @w_420){
+        left: 28vw;
+        width: 308px;
+        margin: 9px 0;
+      }
     }
 
     &--third{
@@ -54,6 +69,11 @@
       @media (max-width: @w_1024){
         display: block;
         text-align: start;
+      }
+
+      @media (max-width: @w_420){
+        left: -15vw;
+        width: 437px;
       }
     }
   }

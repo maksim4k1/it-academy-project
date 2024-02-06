@@ -8,6 +8,10 @@
     @media (max-width: @w_768){
       margin-top: 68px;
     }
+
+    @media (max-width: @w_420){
+      margin-top: 60px;
+    }
   }
 
   &__list {
@@ -27,6 +31,11 @@
 
     @media (max-width: @w_920){
       margin-bottom: 40px;
+    }
+
+    @media (max-width: @w_420){
+      gap: 80px;
+      margin-bottom: 30px;
     }
   }
 
@@ -51,6 +60,10 @@
       @media (max-width: @w_1024){
         bottom: -51px;
       }
+
+      @media (max-width: @w_420){
+        bottom: -40px;
+      }
     }
 
     &:last-child::after{
@@ -61,6 +74,10 @@
   &__link-container {
     width: 150px;
     margin-left: auto;
+
+    @media (max-width: @w_630){
+      width: 116px;
+    }
   }
 
   &__link {
@@ -74,6 +91,12 @@
       &:hover{
         color: @red_hover;
       }
+    }
+
+    @media (max-width: @w_630){
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 }
