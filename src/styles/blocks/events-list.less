@@ -5,6 +5,18 @@
 
   &__title{
     margin-top: 138px;
+
+    @media(max-width: @w_1340){
+      width: 624px;
+    }
+
+    @media(max-width: @w_768){
+      margin-top: 90px;
+    }
+
+    @media(max-width: @w_420){
+      margin-top: 20px;
+    }
   }
 
   &__event-card{
@@ -14,6 +26,44 @@
     @media (max-width: @w_1340){
       width: calc((100% / 3) - (80px / 3));
     }
+
+    @media (max-width: @w_1024){
+      width: calc((100% / 2) - (30px / 2));
+    }
+
+    @media (max-width: @w_650){
+      max-width: 405px;
+      width: 100%;
+    }
+
+    @media (max-width: @w_1024){
+      &>.event-card__link>.event-card__title{
+        min-height: 54px;
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      &>.event-card__link>.event-card__description{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 14px;
+      }
+    }
+
+    @media (max-width: @w_420){
+      &>.event-card__link>.event-card__title{
+        min-height: 50px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &>.event-card__link>.event-card__description{
+        min-height: 76px;
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0;
+      }
+    }
   }
 
   &__button{
@@ -22,7 +72,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
     background-color: transparent;
     transition: color 0.2s;
 
@@ -36,11 +86,24 @@
         }
       }
     }
+
+    @media (max-width: @w_1340){
+      margin-top: 60px;
+    }
+
+    @media (max-width: @w_650){
+      margin-top: 50px;
+    }
   }
 
   &__button-title {
     font-size: 16px;
     font-weight: 600;
+
+    @media (max-width: @w_1024){
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__button-icon {
@@ -48,7 +111,11 @@
     width: 60px;
     fill: @black;
     stroke: @black;
-
     transition: fill 0.2s, stroke 0.2s;
+
+    @media (max-width: @w_1024){
+      height: 67px;
+      width: 40px;
+    }
   }
 }
