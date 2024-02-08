@@ -126,6 +126,13 @@
           stroke: @red_hover;
         }
       }
+      &.button-disabled:hover{
+        stroke: @gray_disabled;
+      }
+    }
+
+    &.button-disabled > .upcoming__icon{
+      stroke: @gray_disabled;
     }
   }
 
@@ -144,31 +151,6 @@
     @media (max-width: @w_768){
       width: 60px;
       height: 60px;
-    }
-  }
-
-  &__swipe-sections {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-
-    @media (max-width: @w_768){
-      gap: 3.67px;
-    }
-  }
-
-  &__swipe-section {
-    width: 15px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: @gray_disabled;
-
-    @media (max-width: @w_768){
-      width: 9.16px;
-    }
-
-    &--active {
-      background-color: @black;
     }
   }
 

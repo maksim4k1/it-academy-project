@@ -10,36 +10,38 @@
   }
 
   // modal
-  const modalEl = document.getElementById("modal");
-  const closeModalFormButtonEl = document.getElementById("close-modal-form-button");
-  const closeModalButtonEl = document.getElementById("close-modal-button");
-  const openModalButtonEl = document.getElementById("open-modal-button");
-  
-  let modalIsOpened = false;
-  
-  function closeModal(){
-    documentOverflowAuto();
-    modalEl.classList.remove("modal--visible");
-    modalIsOpened = false;
-  }
-  function openModal(){
-    documentOverflowHidden();
-    modalEl.classList.add("modal--visible");
-    modalIsOpened = true;
-  }
+  const modalEl = document.getElementById("js-modal");
   
   if(modalEl){
-    modalEl.onclick = (event) => {
-      if(event.target === event.currentTarget) closeModal();
+    const closeModalFormButtonEl = document.getElementById("js-close-modal-form-button");
+    const closeModalButtonEl = document.getElementById("js-close-modal-button");
+    const openModalButtonEl = document.getElementById("js-open-modal-button");
+
+    function closeModal(){
+      documentOverflowAuto();
+      modalEl.classList.remove("modal--visible");
     }
+    function openModal(){
+      documentOverflowHidden();
+      modalEl.classList.add("modal--visible");
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if(event.key === "Escape" || event.keyCode === 27) closeModal();
+    });
+
+    modalEl.addEventListener("click", (event) => {
+      if(event.target === event.currentTarget) closeModal();
+    });
+
+    if(closeModalFormButtonEl) closeModalFormButtonEl.addEventListener("click", closeModal);
+    if(closeModalButtonEl) closeModalButtonEl.addEventListener("click", closeModal);
+    if(openModalButtonEl) openModalButtonEl.addEventListener("click", openModal);
   }
-  if(closeModalFormButtonEl) closeModalFormButtonEl.onclick = closeModal;
-  if(closeModalButtonEl) closeModalButtonEl.onclick = closeModal;
-  if(openModalButtonEl) openModalButtonEl.onclick = openModal;
 
   // navbar
-  const navbar = document.querySelector(".page-header__nav");
-  const burgerButton = document.getElementById("burger-button");
+  const navbar = document.getElementById("js-header-nav");
+  const burgerButton = document.getElementById("js-burger-button");
   
   let navbarIsOpened = false;
 
@@ -56,12 +58,35 @@
     navbarIsOpened = true;
   }
 
-  navbar.onclick = (event) => {
+  navbar.addEventListener("click", (event) => {
     if(navbarIsOpened && event.target !== event.currentTarget) closeNavbar();
-  }
+  });
   
-  burgerButton.onclick = () => {
+  burgerButton.addEventListener("click", () => {
     if(navbarIsOpened === false) openNavbar();
     else closeNavbar();
-  }
+  });
+
+  // swiper
+  const swipers = document.querySelectorAll(".js-swiper");
+  console.log(swipers)
+  swipers.forEach(function (swpr) {
+    new Swiper(swpr, {
+      updateOnWindowResize: true,
+      slidesPerView: "auto",
+      freeMode: true,
+      spaceBetween: 0,
+      speed: 500,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-arrow-next",
+        prevEl: ".swiper-arrow-prev",
+        disabledClass: "button-disabled",
+      },
+    });
+  });
 })();
