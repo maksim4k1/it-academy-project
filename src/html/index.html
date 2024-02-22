@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 <!DOCTYPE html>
 <html lang="ru">
   @@include('./blocks/head.html')
@@ -5,31 +6,36 @@
     @@include('./blocks/page-header.html')
     <header class="main-header home__main-header">
       <h1 class="main-header__title">арт — пространство</h1>
-      <picture class="main-header__picture">
+      <div class="main-header__picture-container">
         <div class="main-header__picture-lines"></div>
-        <img src="./assets/images/lenni.svg" alt="LENNI" class="main-header__image">
-      </picture>
-      <p class="main-header__text">для людей, горящих сердцем и делом<br/>место для настоящего</p>
-    
+        <picture class="main-header__picture">
+          <img
+            src="./assets/images/lenni.svg"
+            alt="LENNI"
+            class="main-header__image"
+          />
+        </picture>
+      </div>
+      <p class="main-header__text">
+        для людей, горящих сердцем и делом<br />место для настоящего
+      </p>
+
       @@include('./blocks/action.html', {"class": "main-header__buttons"})
     </header>
 
     <main class="main">
       <div class="home">
-        @@include('./blocks/about.html')
-        @@include('./blocks/upcoming.html')
-        @@include('./blocks/blog.html')
-        @@include('./blocks/contacts.html')
+        @@include('./blocks/about.html') @@include('./blocks/upcoming.html')
+        @@include('./blocks/blog.html') @@include('./blocks/contacts.html')
 
         <div class="doit home__doit">
-          <div class="doit__text doit__text--first">Просто делайте, </div>
+          <div class="doit__text doit__text--first">Просто делайте,</div>
           <div class="doit__text doit__text--second">что нравится,</div>
           <div class="doit__text doit__text--third">а мы вам поможем</div>
         </div>
       </div>
     </main>
-    @@include('./blocks/page-footer.html')
-    @@include('./blocks/modal.html')
+    @@include('./blocks/page-footer.html') @@include('./blocks/modal.html')
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcLrkZGDwvV0VPtDxpHiCSB2TyE26f5jI"></script>
     <script src="./scripts/swiper.min.js"></script>
