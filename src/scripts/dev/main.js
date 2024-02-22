@@ -8,7 +8,7 @@
   function documentOverflowHidden(){
     document.documentElement.style.overflow = "hidden";
   }
-
+  
   // modal
   const modalEl = document.getElementById("js-modal");
   
@@ -16,7 +16,7 @@
     const closeModalFormButtonEl = document.getElementById("js-close-modal-form-button");
     const closeModalButtonEl = document.getElementById("js-close-modal-button");
     const openModalButtonEl = document.getElementById("js-open-modal-button");
-
+    
     function closeModal(){
       documentOverflowAuto();
       modalEl.classList.remove("modal--visible");
@@ -25,15 +25,15 @@
       documentOverflowHidden();
       modalEl.classList.add("modal--visible");
     }
-
+    
     document.addEventListener("keydown", (event) => {
       if(event.key === "Escape" || event.keyCode === 27) closeModal();
     });
-
+    
     modalEl.addEventListener("click", (event) => {
       if(event.target === event.currentTarget) closeModal();
     });
-
+    
     if(closeModalFormButtonEl) closeModalFormButtonEl.addEventListener("click", closeModal);
     if(closeModalButtonEl) closeModalButtonEl.addEventListener("click", closeModal);
     if(openModalButtonEl) openModalButtonEl.addEventListener("click", openModal);
@@ -44,7 +44,7 @@
   const burgerButton = document.getElementById("js-burger-button");
   
   let navbarIsOpened = false;
-
+  
   function closeNavbar(){
     documentOverflowAuto();
     navbar.classList.remove("page-header__nav--opened");
@@ -57,7 +57,7 @@
     burgerButton.classList.add("page-header__burger-button--close");
     navbarIsOpened = true;
   }
-
+  
   navbar.addEventListener("click", (event) => {
     if(navbarIsOpened && event.target !== event.currentTarget) closeNavbar();
   });
@@ -66,6 +66,43 @@
     if(navbarIsOpened === false) openNavbar();
     else closeNavbar();
   });
+  
+  //select
+  const jsSelectric = $(".js-selectric");
+  if (jsSelectric.length) {
+    jsSelectric.selectric({
+      nativeOnMobile: false,
+    });
+  }
+
+  // date input
+  const dateField = $(".js-dateField");
+  if (dateField.length) {
+    const pickerInit = function (pick) {
+      const dateInput = pick.find(".js-dateInput");
+      const dateDay = pick.find(".js-dateDay");
+      const dateMonth = pick.find(".js-dateMonth");
+      const dateYear = pick.find(".js-dateYear");
+
+      const dateConfig = {
+        autoClose: true,
+        minDate: new Date(),
+        navTitles: {
+          days: "MMMM <i>yyyy</i>"
+        },
+        onSelect: function ({ date }) {
+          dateDay[0].val(date ? ("0" + date.getDate()).slice(-2) : "");
+          dateMonth[0].val(date ? ("0" + (date.getMonth() + 1)).slice(-2) : "");
+          dateYear[0].val(date ? date.getFullYear() : "");
+        }
+      };
+      new AirDatepicker(dateInput[0], dateConfig);
+    };
+    
+    $.each(dateField, function () {
+      pickerInit($(this));
+    });
+  }
 
   // swiper
   const swipers = document.querySelectorAll(".js-swiper");
@@ -89,7 +126,7 @@
       },
     });
   });
-
+  
   // map
   const contactsMap = document.querySelector("#js-map");
   if (contactsMap) {

@@ -127,7 +127,10 @@
         }
       }
       &.button-disabled:hover{
-        stroke: @gray_disabled;
+        cursor: default;
+        & > .upcoming__icon{
+          stroke: @gray_disabled;
+        }
       }
     }
 

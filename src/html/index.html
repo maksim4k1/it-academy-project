@@ -25,8 +25,11 @@
 
     <main class="main">
       <div class="home">
-        @@include('./blocks/about.html') @@include('./blocks/upcoming.html')
-        @@include('./blocks/blog.html') @@include('./blocks/contacts.html')
+        <!-- prettier-ignore -->
+        @@include('./blocks/about.html')
+        @@include('./blocks/upcoming.html')
+        @@include('./blocks/blog.html')
+        @@include('./blocks/contacts.html')
 
         <div class="doit home__doit">
           <div class="doit__text doit__text--first">Просто делайте,</div>
@@ -35,8 +38,13 @@
         </div>
       </div>
     </main>
-    @@include('./blocks/page-footer.html') @@include('./blocks/modal.html')
+    <!-- prettier-ignore -->
+    @@include('./blocks/page-footer.html')
+    @@include('./blocks/modal.html')
 
+    <script src="scripts/air-datepicker.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.selectric.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcLrkZGDwvV0VPtDxpHiCSB2TyE26f5jI"></script>
     <script src="./scripts/swiper.min.js"></script>
     <script src="./scripts/main.js"></script>
