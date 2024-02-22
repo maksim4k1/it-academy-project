@@ -7,7 +7,16 @@
     word-break: break-word;
 
     &--mb30 {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
+
+      @media (max-width: @w_1140){
+        margin-bottom: 0;
+      }
+
+      @media (max-width: @w_630){
+        font-size: 16px;
+        max-width: 180px;
+      }
     }
   }
 
@@ -18,71 +27,13 @@
     display: flex;
     flex-flow: column;
     gap: 10px;
-  }
 
-  &__bilets {
-    margin: auto 0 0;
-  }
-
-  &__bilets-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
-  }
-
-  &__bilets-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__price {
-    padding: 0 15px 0 0;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  &__summ {
-    margin: 25px 0 53px;
-    display: flex;
-    justify-content: space-between;
-    gap: calc(100px / 3);
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  &__summ-item {
-    width: calc(50% - 25px);
-    text-align: right;
-
-    &--right {
-      width: calc(50% - 10px);
-      text-align: left;
+    @media (max-width: @w_1140){
+      gap: 15px;
     }
-  }
 
-  &__button {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    color: @white;
-    color: @white;
-    background-color: @red;
-    border-color: @red;
-
-    @media (hover:hover){
-      &:hover{
-        background-color: @red_hover;
-        border-color: @red_hover;
-      }
+    @media (max-width: @w_630){
+      margin-bottom: 0;
     }
-  }
-
-  &__table{
-    width: min-content;
-    white-space: nowrap;
   }
 }
