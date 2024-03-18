@@ -13,7 +13,10 @@
 
     <div class="modal__container">
       <h2 class="modal__title">Заполните форму<br />и мы подберем площадку</h2>
-      <form class="modal__form form">
+      <form
+        class="modal__form form"
+        id="js-eventForm"
+      >
         <div class="form__section form__section--first">
           <h4 class="form__subtitle form__subtitle--first">
             Формат мероприятия:
@@ -73,6 +76,7 @@
                   readonly
                 />
               </div>
+
               <input
                 class="field__date-picker js-dateInput"
                 type="text"
@@ -94,6 +98,7 @@
                 name="name"
                 class="field__input"
                 placeholder="Имя"
+                required
               />
             </label>
             <label class="form__field form__field--half-width field">
@@ -103,6 +108,7 @@
                 name="surname"
                 class="field__input"
                 placeholder="Фамилия"
+                required
               />
             </label>
             <label class="form__field form__field--half-width field">
@@ -110,8 +116,9 @@
               <input
                 type="text"
                 name="phone"
-                class="field__input"
-                placeholder="+7 (___) ___ __ __"
+                class="field__input js-mobileMask"
+                placeholder="Телефон"
+                required
               />
             </label>
             <label class="form__field form__field--half-width field">
@@ -121,6 +128,7 @@
                 name="email"
                 class="field__input"
                 placeholder="Email"
+                required
               />
             </label>
           </div>
@@ -144,9 +152,9 @@
           <!-- prettier-ignore -->
           @@include("./checkbox.html", {
             "class": "form__checkbox", 
-            "name": "accept",
+            "name": "isAccept",
             "label": "Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных",
-            checked: "checked"
+            required: "required"
           })
         </div>
 

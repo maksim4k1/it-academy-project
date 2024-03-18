@@ -1,7 +1,7 @@
 .page-footer {
   margin-top: 65px;
 
-  @media (max-width: @w_1340){
+  @media (max-width: @w_1340) {
     margin-top: 100px;
   }
 
@@ -15,7 +15,8 @@
     flex-flow: column;
     gap: 56px;
 
-    &::before, &::after{
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -24,31 +25,33 @@
       height: 2px;
       background: @black_linear;
     }
-    
-    &::after{
+
+    &::after {
       left: auto;
       right: 10%;
       transform: rotate(180deg);
     }
 
-    @media (max-width: @w_1024){
-      &::before, &::after{
+    @media (max-width: @w_1024) {
+      &::before,
+      &::after {
         width: calc(40% - 25px);
       }
     }
 
-    @media (max-width: @w_768){
+    @media (max-width: @w_768) {
       padding-top: 61px;
       padding-bottom: 65px;
       gap: 58px;
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       padding-bottom: 50px;
       padding-top: 63px;
       gap: 68px;
 
-      &::before, &::after{
+      &::before,
+      &::after {
         width: calc(40% - 10px);
       }
     }
@@ -59,12 +62,12 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @media (max-width: @w_630){
+    @media (max-width: @w_630) {
       flex-flow: column;
       gap: 59px;
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       gap: 61px;
     }
   }
@@ -76,11 +79,11 @@
     gap: 23px;
     border-left: 4px solid @red;
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       font-size: 14px;
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       gap: 27px;
     }
   }
@@ -91,8 +94,8 @@
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.2s;
-    @media (hover:hover){
-      &:hover{
+    @media (hover: hover) {
+      &:hover {
         color: @red_hover;
       }
     }
@@ -104,15 +107,22 @@
     display: flex;
     flex-flow: wrap;
 
-    @media (max-width: @w_768){
+    span.error {
+      display: block;
+      margin-top: 5px;
+      color: @red;
+      order: 3;
+    }
+
+    @media (max-width: @w_768) {
       width: 388px;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       width: 300px;
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       margin-left: -20px;
       width: calc(100% + 40px);
     }
@@ -125,16 +135,16 @@
     font-weight: 600;
     word-break: break-word;
 
-    @media (max-width: @w_768){
+    @media (max-width: @w_768) {
       margin-left: 0;
       margin-bottom: 24px;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       font-size: 13px;
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       margin-left: 20px;
       margin-bottom: 14px;
     }
@@ -149,7 +159,7 @@
     background-color: @white;
     border: none;
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       width: calc(100% - 116px);
       height: 46px;
       padding: 17px 20px 13px;
@@ -167,13 +177,13 @@
     font-size: 14px;
     background-color: @black;
     transition: background-color 0.2s;
-    @media (hover:hover){
-      &:hover{
+    @media (hover: hover) {
+      &:hover {
         background-color: @red_hover;
       }
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       min-width: 116px;
       max-width: 116px;
       height: 46px;
@@ -181,11 +191,11 @@
     }
   }
 
-  &__checkbox{
+  &__checkbox {
     font-size: 14px;
     font-weight: 300;
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       display: block;
       min-width: 280px;
       font-size: 12px;
@@ -197,18 +207,18 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-flow: wrap;
-    
-    @media (max-width: @w_1024){
+
+    @media (max-width: @w_1024) {
       gap: 60px;
     }
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       align-items: flex-start;
       justify-content: center;
       flex-flow: column;
       gap: 5px;
     }
 
-    @media (max-width: @w_1024){
+    @media (max-width: @w_1024) {
       font-size: 14px;
     }
   }
@@ -216,27 +226,27 @@
   &__confirmations {
     width: 400px;
 
-    & > .page-footer__confirmation:last-child{
+    & > .page-footer__confirmation:last-child {
       margin-left: 55px;
-      @media (max-width: @w_1140){
+      @media (max-width: @w_1140) {
         margin-left: 15px;
       }
 
-      @media (max-width: @w_740){
+      @media (max-width: @w_740) {
         margin-left: 0;
         margin-top: 4px;
       }
     }
 
-    @media (max-width: @w_1140){
+    @media (max-width: @w_1140) {
       width: 360px;
     }
 
-    @media (max-width: @w_1024){
+    @media (max-width: @w_1024) {
       width: auto;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       width: 100%;
       display: flex;
       flex-flow: column;
@@ -248,11 +258,11 @@
     width: 100%;
     margin: 0 0 20px;
 
-    @media (max-width: @w_768){
+    @media (max-width: @w_768) {
       margin-bottom: 15px;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       margin: 0;
       text-align: end;
       order: 2;
@@ -264,8 +274,8 @@
     font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
-    @media (hover:hover){
-      &:hover{
+    @media (hover: hover) {
+      &:hover {
         color: @red_hover;
       }
     }
@@ -277,19 +287,19 @@
     display: flex;
     justify-content: center;
     gap: 44px;
-    
-    @media (max-width: @w_1024){
+
+    @media (max-width: @w_1024) {
       width: 100%;
       order: -1;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       margin-bottom: 55px;
       gap: 30px;
     }
   }
 
-  &__socials-link{
+  &__socials-link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -299,19 +309,19 @@
     border-radius: 50%;
     transition: background-color 0.2s;
 
-    @media (hover:hover){
-      &:hover{
+    @media (hover: hover) {
+      &:hover {
         background-color: @red_hover;
       }
     }
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       height: 48px;
       width: 48px;
     }
   }
 
-  &__socials-icon{
+  &__socials-icon {
     width: 24px;
     height: 24px;
   }
@@ -321,30 +331,30 @@
     display: flex;
     justify-content: flex-end;
 
-    @media (max-width: @w_1140){
+    @media (max-width: @w_1140) {
       width: 360px;
     }
 
-    @media (max-width: @w_1024){
+    @media (max-width: @w_1024) {
       width: auto;
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       width: 100%;
     }
   }
 
-  &__creator-link{
+  &__creator-link {
     display: flex;
     align-items: center;
     gap: 15px;
     text-decoration: none;
 
-    @media (max-width: @w_768){
+    @media (max-width: @w_768) {
       margin: 0px 1px -1px 0px;
     }
-    
-    @media (max-width: @w_420){
+
+    @media (max-width: @w_420) {
       margin: 2px 2px 0 0;
     }
   }

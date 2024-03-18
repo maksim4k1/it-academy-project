@@ -3,37 +3,37 @@
   flex-flow: wrap;
   gap: 30px 60px;
 
-  @media (max-width: @w_1024){
+  @media (max-width: @w_1024) {
     gap: 30px;
   }
 
   &__section {
     width: calc(50% - 30px);
 
-    @media (max-width: @w_1024){
+    @media (max-width: @w_1024) {
       width: calc(50% - 15px);
     }
 
-    @media (max-width: @w_740){
+    @media (max-width: @w_740) {
       width: 100%;
     }
 
-    &--full-width{
+    &--full-width {
       width: 100%;
 
-      @media (max-width: @w_1024){
+      @media (max-width: @w_1024) {
         width: 100%;
       }
     }
 
-    &--checkbox{
-      @media (max-width: @w_1024){
+    &--checkbox {
+      @media (max-width: @w_1024) {
         margin: 3px 0 5px;
       }
     }
 
-    &--first{
-      @media (max-width: @w_630){
+    &--first {
+      @media (max-width: @w_630) {
         margin-bottom: 25px;
       }
     }
@@ -45,20 +45,20 @@
     font-weight: 700;
     word-break: break-word;
 
-    @media (max-width: @w_420){
+    @media (max-width: @w_420) {
       font-size: 16px;
     }
 
-    &--first{
-      @media (max-width: @w_420){
+    &--first {
+      @media (max-width: @w_420) {
         font-size: 18px;
       }
     }
 
-    &--last{
-      @media (max-width: @w_420){
+    &--last {
+      @media (max-width: @w_420) {
         width: 230px;
-        margin-bottom: 20px;;
+        margin-bottom: 20px;
       }
     }
   }
@@ -68,89 +68,90 @@
     display: flex;
     gap: 15px;
 
-    &--ff-col{
+    &--ff-col {
       flex-flow: column;
     }
 
-    &--mb30{
+    &--mb30 {
       margin-bottom: 30px;
     }
 
-    &--min-content{
-      & > .form__field{
+    &--min-content {
+      & > .form__field {
         width: min-content;
       }
     }
 
-    &--flex{
+    &--flex {
       margin-bottom: 20px;
       display: flex;
       flex-flow: wrap;
       gap: 30px 60px;
 
-      @media (max-width: @w_1024){
+      @media (max-width: @w_1024) {
         gap: 30px;
       }
 
-      @media (max-width: @w_740){
+      @media (max-width: @w_740) {
         flex-flow: column;
       }
     }
   }
 
-  &__radio{
+  &__radio {
     max-width: 100%;
     width: min-content;
     white-space: nowrap;
   }
 
-  &__field{
+  &__field {
+    position: relative;
     width: 100%;
 
-    &--half-width{
+    &--half-width {
       width: calc(50% - 30px);
 
-      @media (max-width: @w_1024){
+      @media (max-width: @w_1024) {
         width: calc(50% - 15px);
       }
 
-      @media (max-width: @w_740){
+      @media (max-width: @w_740) {
         width: 100%;
       }
     }
   }
 
-  &__checkbox{
+  &__checkbox {
     font-size: 14px;
   }
 
-  &__buttons{
+  &__buttons {
     margin-top: 5px;
     display: flex;
     align-items: center;
 
-    @media (max-width: @w_630){
+    @media (max-width: @w_630) {
       flex-flow: column;
       gap: 30px;
     }
   }
 
-  &__button{
+  &__button {
     height: 52px;
     width: calc(50% - 30px);
     max-width: 400px;
     display: flex;
     align-items: center;
 
-    @media (max-width: @w_1024){
+    @media (max-width: @w_1024) {
       width: calc(50% - 15px);
     }
 
-    @media (max-width: @w_630){
+    @media (max-width: @w_630) {
       width: 100%;
     }
 
-    &--inline{
+    &--inline {
       width: 70px;
       height: 30px;
       padding: 0;
@@ -160,12 +161,12 @@
       border: none;
       transition: color 0.2s, text-decoration-color 0.2s;
 
-      @media (max-width: @w_630){
+      @media (max-width: @w_630) {
         width: 140px;
       }
 
-      @media (hover:hover){
-        &:hover{
+      @media (hover: hover) {
+        &:hover {
           color: @red_hover;
           text-decoration-color: @red_hover;
           background-color: transparent;

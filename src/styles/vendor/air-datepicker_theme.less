@@ -1,34 +1,41 @@
 .air-datepicker-overlay {
-  --adp-overlay-z-index: 119;
+  --adp-overlay-z-index: 11900;
 }
+
 .air-datepicker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  --adp-z-index: 120;
+  --adp-z-index: 12000;
   --adp-width: 250px;
   --adp-border-radius: 5px;
   --adp-border-color-inner: @gray;
+
   --adp-font-family: @font1;
+
   --adp-day-name-color: @black;
   --adp-day-name-color-hover: @red;
+
   --adp-accent-color: @red_hover;
   --adp-color-secondary: @red;
+
   --adp-cell-background-color-selected: @red_hover;
   --adp-cell-background-color-selected-hover: @red;
+
   --adp-background-color-hover: @gray;
-  --adp-background-color-active: @gray_placeholder;
+  --adp-background-color-active: @gray_disabled;
 }
+
 .air-datepicker-nav--title {
   color: @black;
 }
+
 .air-datepicker-nav--title i {
   color: inherit;
 }
+
 .air-datepicker-body--day-name,
 .air-datepicker-cell {
   font-weight: 700;
 }
+
 .air-datepicker-cell.-disabled- {
   pointer-events: none;
 }
