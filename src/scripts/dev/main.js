@@ -2,7 +2,8 @@
   "use strict";
 
   const checkboxes = document.querySelectorAll("input[name=tableNum]");
-  if (checkboxes) {
+  const form = document.getElementById("js-form");
+  if (checkboxes && form) {
     let tablesSet = new Set();
     const redCost = 1400;
     const blackCost = 1250;
@@ -14,7 +15,6 @@
     const sumRed = document.getElementById("js-sumRed");
     const sumBlack = document.getElementById("js-sumBlack");
     const sum = document.getElementById("js-sum");
-    const form = document.getElementById("js-form");
 
     for (let input of checkboxes) {
       input.addEventListener("change", () => {
